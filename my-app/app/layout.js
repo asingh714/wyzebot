@@ -1,17 +1,15 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Wyzebot",
+  title: "WyzeBot",
   description:
     "An innovative web app that transforms chat-based instructions into real-time coded web components using AI.",
 };
 
-export default function MainLayout({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <main>{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
