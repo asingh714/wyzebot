@@ -1,0 +1,49 @@
+.dashboard-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+.code-mirrors-container {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.code-mirror-bg {
+  background-color: #282c34;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+.code-mirror-heading {
+  font-weight: bold;
+}
+
+.codeMirror {
+  border: 1px solid #282c34;
+}
+
+.result-form-container {
+  display: grid;
+  grid-column: 1 / 4;
+  grid-template-columns: 2fr 1fr;
+}
+
+.result {
+}
+
+.result-form-container form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid pink;
+}
+
+.result-form-container textarea {
+  margin-bottom: 8px;
+}
+
+.result-form-container button {
+  cursor: pointer;
+}
