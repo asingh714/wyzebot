@@ -7,6 +7,7 @@ import CodeMirror from "@uiw/react-codemirror";
 
 import Result from "@/components/Result/Result";
 import "./dashboard.css";
+import UIForm from "@/components/UI-Form/UIForm";
 
 const DashboardPage = () => {
   const [html_edit, setHtmlEdit] = useState("");
@@ -51,10 +52,7 @@ const DashboardPage = () => {
       </div>
       <div className="result-form-container">
         <Result srcCode={srcCode} />
-        <form onSubmit={() => {}}>
-          <textarea type="text" />
-          <button type="submit">Submit Code</button>
-        </form>
+        <UIForm />
       </div>
     </div>
   );

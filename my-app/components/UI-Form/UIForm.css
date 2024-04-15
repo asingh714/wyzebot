@@ -1,0 +1,31 @@
+.form-container {
+  border-top: 1px solid #4a5568;
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #4a5568;
+  background-color: #2b313d;
+  height: 75%;
+}
+
+.form-container button {
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: rgba(167, 139, 250, 1);
+  color: #282c34;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  /* background-color: #4a5568;
+  color: white; */
+}
