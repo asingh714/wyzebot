@@ -37,7 +37,6 @@
 .result-form-container form {
   display: flex;
   flex-direction: column;
-  border: 1px solid pink;
 }
 
 .result-form-container textarea {

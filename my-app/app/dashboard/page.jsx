@@ -4,6 +4,8 @@ import { javascript } from "@codemirror/lang-javascript";
 import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
 import CodeMirror from "@uiw/react-codemirror";
+
+import Result from "@/components/Result/Result";
 import "./dashboard.css";
 
 const DashboardPage = () => {
@@ -11,6 +13,11 @@ const DashboardPage = () => {
   const [css_edit, setCssEdit] = useState("");
   const [js_edit, setJsEdit] = useState("");
 
+  const srcCode = `
+      <body>${html_edit}</body>
+      <style>${css_edit}</style>
+      <script>${js_edit}</script>
+`;
   return (
     <div className="dashboard-grid-container">
       <div className="code-mirrors-container">
@@ -43,7 +50,7 @@ const DashboardPage = () => {
         </div>
       </div>
       <div className="result-form-container">
-        <div className="result">RESULT</div>
+        <Result srcCode={srcCode} />
         <form onSubmit={() => {}}>
           <textarea type="text" />
           <button type="submit">Submit Code</button>

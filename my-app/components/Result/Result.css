@@ -1,0 +1,12 @@
+.result-container {
+}
+
+.result-frame {
+  height: 100%;
+  padding: 0.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.result-iframe {
+  width: 100%;
+  height: 100%;
+}
