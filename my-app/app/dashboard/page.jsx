@@ -37,7 +37,7 @@ const DashboardPage = () => {
         <div className="code-mirror-bg">
           <h2 className="code-mirror-heading">HTML</h2>
           <CodeMirror
-            className="codeMirror"
+            className="codeMirror cm-scroller"
             value={htmlEdit}
             theme="dark"
             extensions={[html(true)]}
@@ -47,7 +47,7 @@ const DashboardPage = () => {
         <div className="code-mirror-bg">
           <h2 className="code-mirror-heading">CSS</h2>
           <CodeMirror
-            className="codeMirror"
+            className="codeMirror cm-scroller"
             value={cssEdit}
             theme="dark"
             extensions={[css(true)]}
@@ -57,7 +57,7 @@ const DashboardPage = () => {
         <div className="code-mirror-bg">
           <h2 className="code-mirror-heading">JavaScript</h2>
           <CodeMirror
-            className="codeMirror"
+            className="codeMirror cm-scroller"
             value={jsEdit}
             theme="dark"
             extensions={[javascript(true)]}
