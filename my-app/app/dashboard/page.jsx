@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { javascript } from "@codemirror/lang-javascript";
 import { html } from "@codemirror/lang-html";
 import { css } from "@codemirror/lang-css";
@@ -10,14 +10,26 @@ import "./dashboard.css";
 import UIForm from "@/components/UI-Form/UIForm";
 
 const DashboardPage = () => {
-  const [html_edit, setHtmlEdit] = useState("");
-  const [css_edit, setCssEdit] = useState("");
-  const [js_edit, setJsEdit] = useState("");
+  const [htmlEdit, setHtmlEdit] = useState("");
+  const [cssEdit, setCssEdit] = useState("");
+  const [jsEdit, setJsEdit] = useState("");
+
+  const onChangeHtml = useCallback((value) => {
+    setHtmlEdit(value);
+  }, []);
+
+  const onChangeCss = useCallback((value) => {
+    setCssEdit(value);
+  }, []);
+
+  const onChangeJavaScript = useCallback((value) => {
+    setJsEdit(value);
+  }, []);
 
   const srcCode = `
-      <body>${html_edit}</body>
-      <style>${css_edit}</style>
-      <script>${js_edit}</script>
+      <body>${htmlEdit}</body>
+      <style>${cssEdit}</style>
+      <script>${jsEdit}</script>
 `;
   return (
     <div className="dashboard-grid-container">
@@ -26,27 +38,30 @@ const DashboardPage = () => {
           <h2 className="code-mirror-heading">HTML</h2>
           <CodeMirror
             className="codeMirror"
-            value={html_edit}
+            value={htmlEdit}
             theme="dark"
             extensions={[html(true)]}
+            onChange={onChangeHtml}
           />
         </div>
         <div className="code-mirror-bg">
           <h2 className="code-mirror-heading">CSS</h2>
           <CodeMirror
             className="codeMirror"
-            value={css_edit}
+            value={cssEdit}
             theme="dark"
             extensions={[css(true)]}
+            onChange={onChangeCss}
           />
         </div>
         <div className="code-mirror-bg">
           <h2 className="code-mirror-heading">JavaScript</h2>
           <CodeMirror
             className="codeMirror"
-            value={js_edit}
+            value={jsEdit}
             theme="dark"
             extensions={[javascript(true)]}
+            onChange={onChangeJavaScript}
           />
         </div>
       </div>

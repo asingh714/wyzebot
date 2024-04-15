@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import "./Result.css"; // Ensure the CSS is correctly imported
+import "./Result.css";
 
 function Result({ srcCode }) {
   return (
