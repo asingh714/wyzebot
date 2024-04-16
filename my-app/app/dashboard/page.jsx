@@ -67,7 +67,11 @@ const DashboardPage = () => {
       </div>
       <div className="result-form-container">
         <Result srcCode={srcCode} />
-        <UIForm />
+        <UIForm
+          setHtmlEdit={setHtmlEdit}
+          setCssEdit={setCssEdit}
+          setJsEdit={setJsEdit}
+        />
       </div>
     </div>
   );

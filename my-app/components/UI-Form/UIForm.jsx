@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
+
 import "./UIForm.css";
 
-const UIForm = () => {
+const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
   const [inputData, setInputData] = useState("");
 
   const handleInputChange = (event) => {
@@ -11,15 +12,25 @@ const UIForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    try {
+      const response = await fetch("/api/dashboard", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userQuery: inputData }),
+      });
+      const data = await response.json();
+      setHtmlEdit(data.html);
+      setCssEdit(data.css);
+      setJsEdit(data.javascript);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <textarea
-        value={inputData}
-        onChange={handleInputChange}
-        type="text"
-        className=""
-      />
+      <textarea value={inputData} onChange={handleInputChange} type="text" />
       <button type="submit">Submit Code</button>
     </form>
   );
