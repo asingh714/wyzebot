@@ -3,6 +3,13 @@ import { useState } from "react";
 
 import "./UIForm.css";
 
+function lowercaseKeys(obj) {
+  return Object.keys(obj).reduce((accumulator, currentKey) => {
+    accumulator[currentKey.toLowerCase()] = obj[currentKey];
+    return accumulator;
+  }, {});
+}
+
 const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
   const [inputData, setInputData] = useState("");
 
@@ -20,7 +27,14 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
         },
         body: JSON.stringify({ userQuery: inputData }),
       });
-      const data = await response.json();
+      let data = await response.json();
+      console.log("Original data", data);
+
+      // Now, lowercase the keys
+      data = lowercaseKeys(data);
+
+      console.log("Data with lowercase keys", data);
+
       setHtmlEdit(data.html);
       setCssEdit(data.css);
       setJsEdit(data.javascript);

@@ -8,7 +8,7 @@ function Result({ srcCode }) {
           className="result-iframe"
           srcDoc={srcCode}
           title="output"
-          sandbox="allow-scripts"
+          sandbox="allow-scripts allow-forms"
         ></iframe>
       </div>
     </div>

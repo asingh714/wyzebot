@@ -62,6 +62,7 @@ const DashboardPage = () => {
             theme="dark"
             extensions={[javascript(true)]}
             onChange={onChangeJavaScript}
+            allow-modals="true"
           />
         </div>
       </div>
