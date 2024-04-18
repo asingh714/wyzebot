@@ -1,6 +1,7 @@
 import Hero from "@/components/Home/Hero";
 import LivePreview from "@/components/Home/LivePreview";
 import Features from "@/components/Home/Features";
+import HowItWorks from "@/components/Home/HowItworks";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <LivePreview />
       <Features />
+      <HowItWorks />
     </div>
   );
 }

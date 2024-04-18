@@ -9,7 +9,7 @@ export default function Features() {
     //   <HoverEffect items={features} />
     // </div>
 
-    <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
+    <div className="h-[75rem] w-full dark:bg-black bg-white  dark:bg-grid-small-white/[0.2] bg-grid-small-black/[0.2] relative flex items-center justify-center">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       <div className="max-w-7xl mx-auto px-2">
@@ -48,7 +48,7 @@ export const features = [
       "Code smarter with AI that spots errors early, keeping your workflow smooth.",
   },
   {
-    title: "Collaborative Coding Experience",
+    title: "Collaborative Experience",
     description:
       "Collaborate efficiently with team members, syncing effortlessly for a unified coding experience.",
   },
