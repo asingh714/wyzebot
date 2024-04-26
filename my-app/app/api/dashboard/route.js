@@ -1,5 +1,4 @@
 import OpenAI from "openai";
-import { StreamData, StreamingTextResponse, experimental_streamText } from "ai";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,

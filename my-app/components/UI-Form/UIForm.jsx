@@ -6,6 +6,7 @@ import lowercaseKeys from "@/utils/lowercaseKeys";
 
 const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
   const [inputData, setInputData] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (event) => {
     setInputData(event.target.value);
@@ -13,6 +14,7 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
     try {
       const response = await fetch("/api/dashboard", {
         method: "POST",
@@ -31,6 +33,8 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
       setJsEdit(data.javascript);
     } catch (error) {
       console.error("Error submitting form:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -42,7 +46,9 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
         type="text"
         placeholder=""
       />
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={isLoading}>
+        {isLoading ? "Loading..." : "Submit"}
+      </button>
     </form>
   );
 };
