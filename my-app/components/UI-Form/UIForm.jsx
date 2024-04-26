@@ -33,6 +33,7 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
       console.error("Error submitting form:", error);
     }
   };
+
   return (
     <form onSubmit={handleSubmit} className="form-container">
       <textarea
@@ -41,7 +42,7 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
         type="text"
         placeholder=""
       />
-      <button type="submit">Submit Code</button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
