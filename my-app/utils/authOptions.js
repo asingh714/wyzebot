@@ -14,11 +14,11 @@ export const authOptions = {
           response_type: "code",
         },
       },
-    }),   
+    }),
   ],
   callbacks: {
     async signIn({ profile }) {
-      await connectDb();
+      await connectDB();
       const userExists = await User.findOne({ email: profile.email });
 
       if (!userExists) {
