@@ -22,9 +22,20 @@ const NavBar = () => {
       <div className="flex justify-between items-center max-w-[900px] w-full">
         <h1 className="text-3xl font-bold">WyzeBot</h1>
         {session && (
-          <Link href="/dashboard" className="text-2xl hover:text-gray-300 z-50">
-            Dashboard
-          </Link>
+          <div className="z-50">
+            <Link
+              href="/dashboard"
+              className="text-2xl hover:text-gray-300 mr-4"
+            >
+              Dashboard
+            </Link>
+            <button
+              onClick={() => signOut()}
+              className=" text-white text-2xl hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 transition duration-300 ease-in-out"
+            >
+              Sign Out
+            </button>
+          </div>
         )}
         {!session &&
           providers &&
