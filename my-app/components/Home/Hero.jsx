@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
+import Link from "next/link";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 
 export default function Hero() {
@@ -24,9 +24,12 @@ export default function Hero() {
           Experience the next generation of coding—where your instructions
           become impeccable web components.
         </div>
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-6 py-4 mt-16">
-          Start Creating
-        </button>
+
+        <Link href="/dashboard">
+          <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-6 py-4 mt-16">
+            Start Creating
+          </button>
+        </Link>
       </motion.div>
     </AuroraBackground>
   );

@@ -14,7 +14,7 @@ export default function Features() {
 
       <div className="max-w-[100rem] mx-auto px-2">
         <h2 className="text-6xl font-semibold text-white text-center">
-          Features
+          What Wyzebot Can Do
         </h2>
         <HoverEffect items={features} />
       </div>

@@ -16,18 +16,17 @@ export const authOptions = {
       },
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async signIn({ profile }) {
       await connectDB();
       const userExists = await User.findOne({ email: profile.email });
 
       if (!userExists) {
-        console.log("profile", profile);
         const username = profile.name.slice(0, 20);
         await User.create({
           email: profile.email,
           username,
-          name: profile.name,
           image: profile.image,
         });
       }
