@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
 import React, { ReactNode } from "react";
+import NavBar from "../NavBar/NavBar";
 
 export const AuroraBackground = ({
   className,
@@ -9,10 +10,13 @@ export const AuroraBackground = ({
   ...props
 }) => {
   return (
-    <main>
+    <main
+      className={cn("relative bg-zinc-50 dark:bg-zinc-900 transition-bg z-10")}
+    >
+      <NavBar />
       <div
         className={cn(
-          "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
+          " text-slate-950 h-[100vh] flex flex-col items-center justify-center ",
           className
         )}
         {...props}

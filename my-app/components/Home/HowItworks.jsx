@@ -60,7 +60,7 @@ const content = [
 
 export default function HowItWorks() {
   return (
-    <div className="flex flex-col bg-black">
+    <div className="flex flex-col bg-black ">
       <h2 className="text-6xl font-semibold text-white text-center py-10">
         How it works
       </h2>
