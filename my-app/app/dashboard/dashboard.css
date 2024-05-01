@@ -12,6 +12,7 @@
 }
 
 .code-mirror-bg {
+  max-height: 60vh;
   background-color: #282c34;
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -30,6 +31,7 @@
   display: grid;
   grid-column: 1 / 4;
   grid-template-columns: 2fr 1fr;
+  min-height: 40vh;
 }
 
 .result {

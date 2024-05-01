@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import PulseLoader from "react-spinners/PulseLoader";
 
 import "./UIForm.css";
 import lowercaseKeys from "@/utils/lowercaseKeys";
@@ -47,7 +48,7 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
         placeholder=""
       />
       <button type="submit" disabled={isLoading}>
-        {isLoading ? "Loading..." : "Submit"}
+        {isLoading ? <PulseLoader color="#282c34" size={8} /> : "Submit"}
       </button>
     </form>
   );
