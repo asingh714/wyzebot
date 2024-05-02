@@ -11,6 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <AuthProvider>
       <html lang="en" class="dark">
+        <head>
+          <link rel="icon" href="/favicon.png" />
+        </head>
         <body>{children}</body>
       </html>
     </AuthProvider>
