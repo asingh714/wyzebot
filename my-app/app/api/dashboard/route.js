@@ -8,20 +8,6 @@ export const POST = async (request) => {
   try {
     const requestBody = await request.json();
     const userQuery = requestBody.userQuery;
-    //   const myAssistant = await openai.beta.assistants.create({
-    //     instructions: process.env.PROMPT,
-    //     name: "WyzeBot",
-    //     description: "Take user inputs and create beautiful code snippets.",
-    //     tools: [{ type: "code_interpreter" }],
-    //     model: "gpt-4-turbo",
-    //   });
-
-    //   const run = await openai.beta.threads.createAndRun({
-    //     assistant_id: myAssistant.id,
-    //     thread: {
-    //       messages: [{ role: "user", content: userQuery }],
-    //     },
-    //   });
 
     const completion = await openai.chat.completions.create({
       messages: [
@@ -38,8 +24,6 @@ export const POST = async (request) => {
       model: "gpt-4-turbo",
       response_format: { type: "json_object" },
     });
-
-    console.log("Response", completion.choices[0].message.content);
 
     return new Response(completion.choices[0].message.content, {
       status: 200,

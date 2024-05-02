@@ -22,7 +22,7 @@ export default function Hero() {
         </h1>
         <div className="font-extralight text-2xl md:text-4xl dark:text-neutral-200 py-4">
           Experience the next generation of coding—where your instructions
-          become impeccable web components.
+          become beautiful web components.
         </div>
 
         <Link href="/dashboard">
