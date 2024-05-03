@@ -16,7 +16,7 @@ export const AuroraBackground = ({
       <NavBar />
       <div
         className={cn(
-          " text-slate-950 h-[100vh] flex flex-col items-center justify-center ",
+          "text-slate-950 h-[100vh] flex flex-col items-center justify-center ",
           className
         )}
         {...props}
