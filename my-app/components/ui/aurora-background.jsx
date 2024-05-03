@@ -13,7 +13,6 @@ export const AuroraBackground = ({
     <main
       className={cn("relative bg-zinc-50 dark:bg-zinc-900 transition-bg z-10")}
     >
-      <NavBar />
       <div
         className={cn(
           "text-slate-950 h-[100vh] flex flex-col items-center justify-center ",

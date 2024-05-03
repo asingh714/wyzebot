@@ -18,7 +18,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="text-white p-10 flex justify-center">
+    <nav className="text-white p-5 flex justify-center bg-black">
       <div className="flex justify-between items-center max-w-[900px] w-full">
         <h1 className="text-3xl font-bold">WyzeBot</h1>
         {session && (
