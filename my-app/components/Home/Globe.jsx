@@ -396,7 +396,7 @@ export default function Globe() {
 
   return (
     <div className="flex flex-row items-center justify-center py-40 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] sm:h-[30rem] px-4">
         <motion.div
           initial={{
             opacity: 0,
@@ -411,16 +411,16 @@ export default function Globe() {
           }}
           className="div"
         >
-          <h2 className="text-center text-xl md:text-6xl font-bold text-black dark:text-white">
+          <h2 className="text-center text-6xl font-bold text-black dark:text-white">
             Explore WyzeBot's Global Reach
           </h2>
-          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+          <p className="text-center text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
             Dive into our interactive globe to see how WyzeBot is making an
             impact worldwide.
           </p>
         </motion.div>
         <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+        <div className="absolute w-full -bottom-20 h-full sm:h-[50rem] md:h-full z-10">
           <World data={sampleArcs} globeConfig={globeConfig} />;
         </div>
       </div>

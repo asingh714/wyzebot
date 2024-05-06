@@ -11,9 +11,9 @@ export default function LivePreview() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black ">
+            <h1 className="text-5xl font-semibold text-black ">
               Unleash the power of <br />
-              <span className="text-4xl md:text-[10rem] font-bold mt-1 leading-none">
+              <span className="text-6xl md:text-[10rem] font-bold mt-1 leading-none">
                 WyzeBot
               </span>
             </h1>

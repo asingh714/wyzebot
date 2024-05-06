@@ -17,10 +17,10 @@ export default function Hero() {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4 "
       >
-        <h1 className="text-5xl md:text-9xl font-bold dark:text-white text-center">
+        <h1 className="text-6xl md:text-9xl font-bold dark:text-white text-center">
           Instantly Transform Ideas into Code
         </h1>
-        <div className="font-extralight text-2xl md:text-4xl dark:text-neutral-200 py-4">
+        <div className="font-extralight text-3xl md:text-4xl dark:text-neutral-200 text-center py-4">
           Experience the next generation of coding—where your instructions
           become beautiful web components.
         </div>
