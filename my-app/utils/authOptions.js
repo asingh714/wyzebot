@@ -33,6 +33,7 @@ export const authOptions = {
       return true;
     },
     async session({ session }) {
+      await connectDB();
       console.log("SESSION", session);
       const user = await User.findOne({ email: session.user.email });
       console.log("USER", user);
