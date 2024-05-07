@@ -34,11 +34,10 @@ export const authOptions = {
     },
     async session({ session }) {
       await connectDB();
-      console.log("SESSION", session);
+
       const user = await User.findOne({ email: session.user.email });
-      console.log("USER", user);
+
       session.user.id = user._id.toString();
-      console.log("SESSION2", session);
 
       return session;
     },

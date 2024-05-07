@@ -26,9 +26,9 @@ const UIForm = ({ setHtmlEdit, setCssEdit, setJsEdit }) => {
       });
 
       let data = await response.json();
-      
-      data = lowercaseKeys(data);
 
+      data = lowercaseKeys(data);
+      
       setHtmlEdit(data.html);
       setCssEdit(data.css);
       setJsEdit(data.javascript);
