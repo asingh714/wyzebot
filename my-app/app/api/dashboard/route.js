@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-export const maxDuration = 20;
+export const maxDuration = 30;
 export const dynamic = "force-dynamic";
 
 const openai = new OpenAI({
